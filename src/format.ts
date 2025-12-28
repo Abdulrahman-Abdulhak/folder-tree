@@ -46,7 +46,7 @@ export function formatTree(node: TreeNode, options: FormatOptions = {}) {
 
       n.children.forEach((c, idx) => {
         const last = idx === n.children.length - 1;
-        draw(c, nextPrefix, last);
+        draw(c, prefix + nextPrefix, last);
       });
 
       //   // Special handling for root: use tree style after first line
