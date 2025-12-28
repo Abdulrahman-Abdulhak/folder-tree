@@ -17,13 +17,14 @@ export type BuildOptions = {
 };
 
 const DEFAULT_IGNORES = [
-  "**/node_modules/**",
-  "**/.git/**",
-  "**/dist/**",
-  "**/build/**",
-  "**/.next/**",
-  "**/.turbo/**",
-  "**/.cache/**",
+  "**/node_modules",
+  "**/.git",
+  "**/dist",
+  "**/build",
+  "**/.next",
+  "**/.turbo",
+  "**/.cache",
+  "package-lock.json",
 ];
 
 function isHidden(name: string) {
