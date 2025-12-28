@@ -25,6 +25,7 @@ const DEFAULT_IGNORES = [
   "**/.turbo",
   "**/.cache",
   "package-lock.json",
+  "next-env.d.ts",
 ];
 
 function isHidden(name: string) {
