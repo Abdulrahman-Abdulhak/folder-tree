@@ -28,10 +28,16 @@ export function formatTree(node: TreeNode, options: FormatOptions = {}) {
   const lines: string[] = [];
 
   function label(n: TreeNode) {
-    const base = opts.showFullPath ? n.fullPath : n.name;
+    const base = opts.showFullPath
+      ? n.fullPath
+      : n.type === "dir"
+      ? n.name + "/"
+      : n.name;
+
     if (opts.showSizes && n.type === "file" && typeof n.size === "number") {
       return `${base} (${formatSize(n.size)})`;
     }
+
     return base;
   }
 
